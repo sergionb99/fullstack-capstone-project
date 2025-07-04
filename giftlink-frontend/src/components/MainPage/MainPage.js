@@ -14,7 +14,7 @@ function MainPage() {
                 const response = await fetch (url);
                 if (!response.ok) {
                     //Something went wrong
-                    throw new(`HTTP error; ${response.status}`);
+                    throw new Error(`HTTP error; ${response.status}`);
                 }
                 const data = await response.json();
                 setGifts(data);
